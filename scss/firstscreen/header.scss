@@ -1,0 +1,123 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    // padding-top: 2.6875rem;
+    margin-left: 0.625rem;
+    padding-top: 0;
+    padding-top: 1.6875rem;
+    // margin-bottom: rem(15px);
+}
+
+.header__logo {
+    margin-right: auto;
+}
+
+.header__nav {
+    @include tablets() {
+        display: none;
+    }
+
+    @include phones(){
+        display: none;
+    }
+}
+
+.header__nav-list {
+    margin-left: 6.875rem;
+    margin-bottom: 0.625rem;
+}
+
+.header__nav-item {
+    display: inline-block;
+    margin-right: 0.5625rem;
+    white-space: nowrap;
+    &:after {
+        content: "";
+        // content: "•";
+        // color: #fff;
+        display: inline-block;
+        position: relative;
+        width: 0.26rem;
+        height: 0.26rem;
+        border-radius: 50%;
+        background: #fff;
+        vertical-align: middle;
+        margin-left: 0.9375rem;
+    }
+}
+
+.header__nav-link {
+    font-family: 'ubuntu', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.42;
+    font-size: 0.8125rem;
+    color: #fff;
+    text-transform: uppercase;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.header__nav-item:last-child:after {
+    display: none;
+}
+
+.header__btn {
+    display: block;
+    margin-bottom: 0.625rem;
+}
+
+.header__btn-link {
+    display: block;
+    width: 6.125rem;
+    height: 2.1875rem;
+    border-radius: 0.3125rem;
+    background-color: #e45028;
+    color: #fff;
+    font-family: 'ubuntu', sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 500; 
+    text-transform: uppercase;
+    line-height: 1.42;
+    transition: .3s;
+    padding: 0.5rem 1.0625rem;
+        &:hover {
+            background-color: #c74521;
+        }
+}
+
+// .hamburger__menu {
+//     display: none;
+//     margin: 0px 10px 5px 10px;
+    
+//     @include tablets(){
+//         display: block;
+//     }
+
+//     @include phones(){
+//         display: block;
+//     }
+// }
+
+.hamburger__menu-link {
+    display: none;
+    margin: 0px 10px 5px 10px;
+    
+    @include tablets(){
+        display: block;
+    }
+
+    @include phones(){
+        display: block;
+    }
+}
+
+.hamburger__menu-pic {
+    height: 24px;
+    margin-left: rem(15px);
+}
+

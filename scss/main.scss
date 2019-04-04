@@ -1,0 +1,38 @@
+//config
+
+@import "config/_mixins.scss";
+
+//resolutions 
+
+// $desktop: 1200px;
+// $laptop: 992px;
+$tablets: 768px;
+$phones: 480px;
+$phones-small: 320px;
+
+//other
+
+@import "fonts.scss";
+@import "style.scss";
+
+//sections
+
+@import "firstscreen/firstscreen.scss";
+@import "firstscreen/header.scss";
+@import "firstscreen/ham-menu.scss";
+@import "webest/webest.scss";
+@import "burgers/burgers.scss";
+@import "team/team.scss";
+@import "menu/menu.scss";
+@import "review/review.scss";
+@import "form/form.scss";
+@import "map/map.scss";
+@import "map/footer.scss";
+
+//point_menu
+
+@import "point_menu/point__menu.scss";
+
+
+
+

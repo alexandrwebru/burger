@@ -1,0 +1,77 @@
+.webest {
+    background: url('../img/webest/bg-2.jpg') no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    .content__title {
+        margin-bottom: rem(80px);
+        // margin-left: rem(54px);
+
+        @include phones {
+            margin-bottom: 0;
+        }
+    }
+
+
+}
+
+.webest__list {
+    display: flex;
+
+    @include phones() {
+        flex-direction: column;
+    }
+}
+
+.webest__item {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    margin-bottom: rem(50px);
+    padding: 0 rem(15px);
+
+    @include phones() {
+        flex-direction: row;
+        width: 100%;
+        text-align: left;
+    }
+}
+
+.webest__ico {
+    margin-bottom: 30px;
+
+    @include phones() {
+        width: 30%;
+    }
+}
+
+.webest__ico-pic {
+    width: 95%;
+    height: rem(85px);
+    max-width: 95%;
+}
+
+.webest__desc {
+    @include phones() {
+        width: 60%;
+    }
+}
+
+.webest__name {
+    font-family: 'lifehack', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #2f3234;
+    margin-bottom: 13px;
+}
+
+.webest__text {
+    font-family: 'ubuntu', sans-serif;
+    font-weight: 300;
+    font-size: 0.875rem;
+    color: #afacaa;
+    line-height: 1.5rem;
+}
+

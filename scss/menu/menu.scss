@@ -1,0 +1,90 @@
+.menu {
+    position: relative;
+    background: url('../img/menu/bg-menu-one.jpg') no-repeat;
+    background-size: cover;
+    font-family: 'ubuntu', sans-serif;
+    font-weight: 300;
+    font-size: rem(14px);
+    color: #fff;
+}
+
+.content__title-menu {
+    margin: rem(100px) rem(94px);
+}
+
+.menu-accordeon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    @include clearfix;
+}
+
+.menu-accordeon__item {
+    height: 100%;
+    float: left;
+
+    // @include phones {
+    //     width: 40px;
+    // }
+}
+
+.menu-accordeon__item--active {
+    .menu-accordeon__item-name {
+        color: #f9b43b;
+    }
+
+    .menu-accordeon__item-block {
+        width: rem(540px);      
+    }
+}
+
+.menu-accordeon__item-link {
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+    justify-content: center;
+    background-size: cover;
+    height: 100%;
+    width: 5.0625rem;
+    float: left;
+    @include phones {
+         width: rem(40px);
+    }   
+}
+
+.menu-accordeon__item-name {
+    font-family: 'gagalin', sans-serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: #fff;
+    transform: rotate(-90deg);
+    text-transform: uppercase;
+    position: relative;
+    white-space: nowrap;
+    margin-bottom: 9.375rem;
+
+    // @include phones {
+    //     margin-right: 25px;
+    // }
+}
+
+.menu-accordeon__item-block {
+    height: 100%;
+    background: rgba(52, 55, 57, .8);
+    overflow: hidden;
+    float: left;
+    width: 0;
+
+}
+
+.menu-accordeon__item-text {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    font-size: 0.875rem;
+    color: #fff;
+    padding: 3.125rem 2.8125rem 0px 1.5625rem;
+    line-height: 1.5rem;
+    
+}

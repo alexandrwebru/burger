@@ -1,0 +1,144 @@
+.team {
+    background: url('../img/bg/team-bg.jpg') no-repeat;
+    background-size: cover;
+}
+
+.team__block {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    background: rgba(52, 55, 57, .7);
+    padding: 0% 15% 0% 7%;
+
+    @include tablets() {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        left: 0;
+    }
+}
+
+.team-accordeon__item {
+    margin-bottom: 20px;
+}
+
+.team__section-title {
+    margin-top: 100px;
+    margin-bottom: 38px;
+
+    @include tablets {
+        margin-top: 0;
+        margin-left: rem(28px);
+    }
+
+    // @include phones {
+    //     margin-left: rem(28px);
+    // }
+}
+
+.team-accordeon__item--active {
+    .team-accordeon__title {
+        color: #f7b33b;
+
+        &:before {
+            transform: rotate(0)
+        }
+    }
+
+    .team-accordeon__about {
+        max-height: 450px; 
+    }
+}
+
+.team-accordeon__title {
+    display: flex;
+    font-family: 'gagalin', sans-serif;
+    font-weight: 400;
+    font-size: rem(14px);
+    color: #fff;
+    text-transform: uppercase;
+    align-items: center;
+        &:before {
+            content: "";   
+            height: 0;
+            width: 0;
+            border: rem(6px) solid transparent;
+            border-top-width: 2px;
+            border-bottom-color: #f7b33b;
+            display: inline-block;
+            transform: rotate(180deg);
+            margin-right: 20px;
+        }
+
+    @include tablets() {
+        font-family: 'gagalin', sans-serif;
+        font-weight: 400;
+        font-size: rem(24px);
+        text-align: center; 
+        margin-left: rem(70px);      
+    }
+
+    // @include phones {
+    //     margin-left: rem(70px);
+    // }
+}
+
+.team-accordeon__about {
+    display: flex;
+    max-height: 0;
+    transition: max-height .8s;
+    overflow: hidden;
+    margin-top: rem(15px);
+    margin-left: rem(13px);
+    
+    @include tablets() {
+        flex-direction: column;
+        align-items: center;
+        font-size: rem(24px);      
+    }
+}
+
+.team-accordeon__img {
+    height: rem(100px);
+    width: rem(100px);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+.team-accordeon__desc {
+    font-family: 'ubuntu', sans-serif;
+    font-size: rem(14px);
+    color: #fff;
+    margin-left: rem(23px);
+    line-height: rem(26px);
+
+    @include tablets() {
+        display: flex;
+        align-items: center;
+        flex-direction: column; 
+    }
+}
+
+.team-accordeon__desc-name {
+   font-weight: 700;
+
+   @include tablets() {
+   margin-right: rem(25px); 
+   }
+}
+
+.team-accordeon__desc-text {
+    font-weight: 300;
+
+    @include tablets() {
+    text-align: center;
+    width: rem(350px);
+    }
+}
+

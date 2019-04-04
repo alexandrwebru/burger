@@ -1,0 +1,58 @@
+.point-menu{
+    position: fixed;
+    top: 5.625rem;
+    right: 2.5rem;
+
+    @include tablets {
+        display: none;
+    }
+
+    @include phones {
+        display: none;
+    }
+}
+
+.point-menu__list {
+    font-size: 0;
+}
+
+.point-menu__link {
+    display: block;
+    position: relative;
+    width: 0.375rem;
+    height: 0.375rem;
+    border-radius: 50%;
+    background: #fff;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid #fff;
+            border-radius: 50%;
+            width: 0.75rem;
+            height: 0.75rem;
+            opacity: 0;
+            }
+}
+
+.point-menu__item.point-menu__item--active .point-menu__link::after {   
+    width: 0.75rem;
+    height: 0.75rem;
+    opacity: 1;
+}
+
+.point-menu__link:hover::after {
+    width: 0.75rem;
+    height: 0.75rem;
+    opacity: 1;
+}
+
+.point-menu__item {
+    padding-bottom: 0.9375rem;
+}
+
+.point-menu__link-point {
+    border: 1px solid transparent;
+}

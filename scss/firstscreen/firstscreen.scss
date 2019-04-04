@@ -1,0 +1,103 @@
+.firstscreen {
+    background: url('../img/firstscreen/video-bg.png') no-repeat;
+    background-size: cover;
+}
+
+.firstscreen__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*****CONTENT__BLOCK*****/
+
+.content__firstscreen {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    @include tablets() {
+        flex-direction: column;
+    }    
+}
+
+.content__left {
+    display: flex;
+    justify-content: center;    
+    align-items: flex-end;
+    text-align: center;  
+    flex: 1;
+}
+
+.content__right {
+    flex: 1;
+    padding-top: rem(89px);
+    /* margin-top: 90px; */
+    // margin-left: 17px;
+    line-height: rem(54px);
+    /* padding-bottom: 0px; */
+    @include tablets {
+        text-align: center;
+        padding: 0 15%;
+    }
+
+    @include phones {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 7%;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+.content__left-avatar {
+
+    @include tablets {
+    width: 65%;
+    }
+}
+
+.content__title, .content__title-first {
+    font-family: 'gagalin', sans-serif;
+    font-weight: 400;
+    font-size: 4.5rem;
+
+    @include phones() {
+        font-size: 3.5rem;
+        margin-bottom: 0;
+    }
+
+}
+
+.content__title--yellow {
+    color: #efae3a;
+}
+
+.content__right-comment {
+    font-family: 'lifehack', sans-serif;
+    font-weight: 500;
+    font-size: 4.0625rem;
+    color: #fff;
+
+    @include phones() {
+        width: rem(275px);
+        font-size: rem(39px);
+        margin-top: 0;
+    }
+}
+
+.scroll__btn {
+    display: block;
+    margin-bottom: 1.375rem;
+    height: rem(50px);
+    width: rem(50px);
+}
+
+.scroll__btn-link {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: url(../img/icons/arrow-scroll.svg) no-repeat center;
+}

@@ -1,0 +1,245 @@
+.form {
+    background: url('../img/bg/bg-texture.png') no-repeat;
+    background-size: cover;
+    font-family: 'ubuntu', sans-serif;
+    font-weight: 300;
+    font-size: rem(14px);
+    color: #fff;
+}
+
+.form__container {
+
+    @include tablets {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
+
+.content__title--form {
+    color: #efae3a;
+    text-align: center;
+    margin-bottom: rem(45px);
+}
+
+.form__block {
+    @include tablets() {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.form__col {
+    float: left;
+    width: 45%;
+    margin-left: 5%;
+
+    @include tablets() {
+        width: 70%;
+    }
+
+    @include phones() {
+        width: 100%;
+        // margin-left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.form__row {
+    display: flex;
+    margin-bottom: rem(20px);
+}
+
+.form__input-elem {
+    display: block;
+    flex: 1;
+    margin-right: rem(20px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @include phones() {
+        &:nth-child(n+4) {
+            // display: none;  
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            overflow: hidden;        
+        }
+
+        &:last-child {
+            margin-right: rem(17px);
+        }
+    }
+}
+
+.form__input {
+    padding: rem(8px);
+    margin-top: rem(5px);
+    width: 100%;
+    background: #fff;
+    border: rem(2px) solid transparent;
+    border-radius: rem(5px);
+
+    &:focus {
+        border-color: #f9b43b;
+        outline: none;
+    }
+}
+
+.form__big-text {
+    height: rem(107px);
+    resize: none;
+}
+
+.form__controls-trigger {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    margin-right: rem(18px);
+}
+
+.form__radio {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+    &:checked + .form__radio-fake {
+        &:after {
+            width: rem(8px);
+            height: rem(8px);
+        }
+    }
+}
+
+
+
+.form__radio-fake {
+    width: rem(16px);
+    height: rem(16px);
+    background: #fff;
+    border-radius: 50%;
+    vertical-align: middle;
+    position: relative;
+    margin-right: rem(10px);
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: #e35028;
+        transition: all 0.3s;
+    }
+}
+
+.form__checkbox {
+    display: flex;
+    cursor: pointer;
+}
+
+.form__checkbox-elem {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+
+    &:checked + .form__checkbox-fake {
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: url("../img/icons/checked.svg") no-repeat;
+            background-size: contain;
+            width: rem(13px);
+            height: rem(13px);
+            transition: all 0.3s;
+        }
+    }    
+}
+
+.form__checkbox-fake {
+    position: relative;
+    width: rem(15px);
+    height: rem(15px);
+    background: #fff;
+    margin-right: rem(10px);
+}
+
+.form__send {
+    background: #e35028;
+    border: 0;
+    border-radius: rem(5px);
+    color: #fff;
+    font-family: 'ubuntu', sans-serif;
+    font-size: rem(13px);
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: rem(10px) rem(16px);
+    cursor: pointer;
+
+}
+
+.form__send-reset {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-family: 'ubuntu', sans-serif;
+    font-size: rem(14px);
+    font-weight: 300;
+    text-transform: none;
+    cursor: pointer;
+}
+
+
+// form overlay 
+
+.form-success__overlay, .form-error__overlay {
+    position: relative;
+    background: #fff;
+    display: none; 
+    border-radius: rem(5px);
+    max-width: rem(250px);
+}
+
+.form-success__overlay-text, .form-error__overlay-text {
+    font-family: 'ubuntu', sans-serif;
+    font-weight: 300;
+    font-size: rem(14px);
+    color: #000;
+    text-align: center;
+    padding: 3% 0%;
+}
+
+.form-overlay-btn {
+    display: block;
+    width: 6.125rem;
+    height: 2.1875rem;
+    border-radius: 0.3125rem;
+    background-color: #e45028;
+    color: #fff;
+    font-family: 'ubuntu', sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 500; 
+    text-transform: uppercase;
+    line-height: 1.42;
+    transition: .3s;
+    padding: 0.5rem 1.0625rem;
+    margin: auto;
+    margin-bottom: rem(5px);
+        &:hover {
+            background-color: #c74521;
+        }
+}

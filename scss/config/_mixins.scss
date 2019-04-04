@@ -1,0 +1,62 @@
+@mixin circle($width, $color) {
+    width: $width;
+    height: $width;
+    border-radius: $width/2;
+    background-color: $color;
+}
+
+@mixin clearfix {
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+}
+
+//function
+
+@function rem($px) {
+    @return $px/16px+0rem;
+}
+
+
+//media 
+
+// @mixin tablets {
+//     @media screen and (min-width: 768px) {
+//         @content;
+//     }
+// }
+
+@mixin desktop {
+    @media screen and (max-width: $desktop) {
+      @content;
+    }
+}
+
+@mixin laptop {
+    @media screen and (max-width: $laptop) {
+      @content;
+    }
+}
+
+@mixin tablets {
+    @media screen and (max-width: $tablets) {
+      @content;
+    }
+}
+
+@mixin phones {
+    @media screen and (max-width: $phones) {
+      @content;
+    }
+}
+
+@mixin phones-small {
+    @media screen and (max-width: $phones-small) {
+      @content;
+    }
+}
+
+
+  
