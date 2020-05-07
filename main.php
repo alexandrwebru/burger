@@ -40,7 +40,6 @@
                 "Content-type: text/html; charset=UTF-8" . "\r\n";
 
     $mail = mail('alexandr_web@mail.ru', 'Заказ', $mail_message, $headers);
-    // $mail = mail('technoviking77@gmail.com', 'Заказ', $mail_message, $headers);
 
     $data = [];
 
